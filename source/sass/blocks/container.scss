@@ -1,0 +1,5 @@
+.container {
+  @include padding-width-right-left;
+  margin: 0 auto;
+  max-width: $desktop-content-width;
+}

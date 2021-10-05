@@ -2,10 +2,19 @@
 
 $white: rgba(255, 255, 255, 1);
 
+$black: rgba(0, 0, 0, 1);
+$dark: #1d1613;
+$grey: #9b9997;
+$light-grey: #f6f5f4;
+
+$brown: #a87b62;
+$light-brown: #f0eae4;
+$banner: rgba(86, 64, 52, 0.7);
+
 // Viewports
 
-$desktop-width: 1920px;
-$desktop-content-width: 1570px;
+$desktop-width: 1366px;
+$desktop-content-width: 1260px;
 $tablet-max-width: 1023px;
 $tablet-width: 768px;
 $mobile-max-width: 767px;

@@ -1,0 +1,19 @@
+// Mixin
+
+@mixin off-margin {
+  margin: 0;
+}
+
+@mixin off-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin padding-width-right-left {
+  padding: 0 45px;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 15px;
+  }
+}
