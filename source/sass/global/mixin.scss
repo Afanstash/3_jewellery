@@ -17,3 +17,34 @@
     padding: 0 15px;
   }
 }
+
+@mixin link {
+  color: inherit;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $light-brown;
+  }
+}
+
+@mixin fonts-title-h2 {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin button($background-color) {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: $background-color;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

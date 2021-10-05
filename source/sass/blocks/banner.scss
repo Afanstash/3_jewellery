@@ -1,0 +1,66 @@
+.banner {
+  padding: 182px 0 181px;
+  text-align: center;
+  color: $white;
+  background-image: url("../img/index-banner.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/index-banne@2x.jpg");
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding: 181px 0 182px;
+    background-image: url("../img/index-banner-tablet.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/index-banner-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 189px 0 188px;
+    background-image: url("../img/index-banner-mobile.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/index-banner-mobile@2x.jpg");
+    }
+  }
+}
+
+.banner h2 {
+  @include fonts-title-h2;
+  margin: 0 0 -8px;
+  font-size: 45px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 18px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 0;
+    font-size: 38px;
+  }
+}
+
+.banner p {
+  @include off-margin;
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 130%;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 19px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 0;
+    font-size: 34px;
+  }
+}

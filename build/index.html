@@ -16,39 +16,41 @@
   <div class="wrapper">
 
     <header class="header">
-      <div class="container">
-        <div class="header__block">
-          <div class="header__search">
-            <button class="header__button-search" type="button" aria-label="Search">
+      <div class="header__wrap">
+        <div class="header__row">
+          <div class="header__block container">
+            <div class="header__search">
               <svg width="14" height="14" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#icon-search"></use>
               </svg>
-            </button>
-            <p>Type here to search</p>
-          </div>
-          <div class="header__menu">
-            <button class="header__button-menu" type="button" aria-label="Click to open or close the menu">
-              <svg width="25" height="18" aria-hidden="true" focusable="false">
-                <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
+              <a class="header__link-search" href="#">Type here to search</a>
+            </div>
+            <div class="header__menu">
+              <button class="header__button-menu" type="button" aria-label="Click to open or close the menu">
+                <svg width="25" height="18" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
+                </svg>
+              </button>
+            </div>
+            <a href="#" class="header__link-logo" tabindex="-1">
+              <svg width="66" height="66" aria-label="Our logo - CH">
+                <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
               </svg>
-            </button>
+            </a>
+            <div class="header__user-block">
+              <a href="#" class="header__link-login">Login</a>
+              <p>Cart 0</p>
+            </div>
+            <div class="header__mail">
+              <button class="header__button-mail" type="button">
+                <span class="visually-hidden">Mail</span>
+                <svg width="20" height="18" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-          <a href="#" class="header__logo-link" tabindex="-1">
-            <svg width="66" height="66" aria-label="Our logo - CH">
-              <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-            </svg>
-          </a>
-          <div class="header__user-block">
-            <a href="#" class="header__link-login">Login</a>
-            <p>Cart 0</p>
           </div>
-          <div class="header__mail">
-            <span class="visually-hidden">Mail</span>
-            <svg width="20" height="18" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
-            </svg>
-          </div>
-        </div>
         <nav class="header__main-nav main-nav">
           <form class="main-nav__form-search" method="get" action="https://echo.htmlacademy.ru/">
             <label for="search"><span class="visually-hidden">Search</span></label>
@@ -68,15 +70,15 @@
           </ul>
           <a href="#" class="main-nav__link-login">Login</a>
         </nav>
-        <div class="header__banner banner">
-          <h1 class="visually-hidden">Jewellery</h1>
-          <h2>PERFECTION</h2>
-          <p>made to be yours</p>
-        </div>
       </div>
     </header>
 
     <main class="main">
+      <h1 class="visually-hidden">Jewellery</h1>
+      <div class="banner">
+        <h2>PERFECTION</h2>
+        <p>made to be yours</p>
+      </div>
     </main>
 
     <footer class="footer">h</footer>
@@ -86,3 +88,4 @@
 
 </body>
 </html>
+
