@@ -48,3 +48,19 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin input {
+  padding: 10px 12px 9px 35px;
+  font-family: inherit;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: $white-opacity-15-percent;
+  border: none;
+  border-radius: 21px;
+
+  &::placeholder {
+    color: $white;
+  }
+}
