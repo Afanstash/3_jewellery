@@ -51,7 +51,7 @@
             </div>
           </div>
           </div>
-        <nav class="header__main-nav main-nav .main-nav--opened main-nav--nojs">
+        <nav class="header__main-nav main-nav main-nav--opened main-nav--nojs">
           <form class="main-nav__form-search" method="get" action="https://echo.htmlacademy.ru/">
             <label for="search"><span class="visually-hidden">Search</span></label>
             <input type="search" name="search" id="search">
@@ -75,17 +75,83 @@
 
     <main class="main">
       <h1 class="visually-hidden">Jewellery</h1>
-      <div class="banner">
+      <section class="banner">
         <h2>PERFECTION</h2>
         <p>made to be yours</p>
-      </div>
+      </section>
     </main>
 
-    <footer class="footer">h</footer>
+    <footer class="footer">
+      <div class="footer__wrap container">
+        <div class="footer__subscription">
+          <h2>The good stuff<br> in your inbox</h2>
+          <p>News and updates from CH.<br> No spam, we promise.</p>
+          <form class="footer__form-news" method="post" action="https://echo.htmlacademy.ru/">
+            <div class="form__field">
+              <label for="email"><span class="visually-hidden">Your E-mail</span></label>
+              <input type="email" name="email" id="email" placeholder="Your E-mail">
+            </div>
+            <button class="footer__button-form-submit" type="submit">
+              <span>Sign Up</span>
+              <svg width="30" height="11" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite_auto.svg#icon-right-arrow"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <div class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">Ordering & Payment</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Terms & Conditions</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Returns & Exchanges</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Delivery</a></li>
+          </ul>
+          <ul class="footer__list-contacts">
+            <li class="footer__item"><a href="#" class="footer__link">About CH</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Stores & Hours</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Jobs</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+          </ul>
+          <ul class="footer__list-socials socials-list">
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link">
+                <svg width="15" height="15" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link">
+                <svg width="15" height="15" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link">
+                <svg width="16" height="15" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite_auto.svg#icon-pinterest"></use>
+                </svg>
+                <span>Pinterest</span>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#" class="socials-list__link">
+                <svg width="15" height="13" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+                </svg>
+                <span>Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script src="js/main.js"></script>
 
 </body>
 </html>
-

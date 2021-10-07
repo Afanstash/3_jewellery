@@ -36,6 +36,9 @@
   font-family: "Cormorant Garamond", "Georgia", serif;
   font-style: normal;
   font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
 }
 
 @mixin button($background-color) {
@@ -59,8 +62,4 @@
   background-color: $white-opacity-15-percent;
   border: none;
   border-radius: 21px;
-
-  &::placeholder {
-    color: $white;
-  }
 }

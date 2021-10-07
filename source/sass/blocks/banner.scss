@@ -35,8 +35,6 @@
   @include fonts-title-h2;
   margin: 0 0 -8px;
   font-size: 45px;
-  line-height: 130%;
-  letter-spacing: 0.03em;
 
   @media (max-width: $tablet-max-width) {
     margin-right: 18px;
