@@ -19,6 +19,7 @@
 }
 
 @mixin link {
+  display: block;
   color: inherit;
   cursor: pointer;
 
@@ -39,6 +40,7 @@
   font-size: 34px;
   line-height: 130%;
   letter-spacing: 0.03em;
+  color: $dark;
 }
 
 @mixin button($background-color) {

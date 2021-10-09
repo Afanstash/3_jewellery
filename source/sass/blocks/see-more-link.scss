@@ -1,0 +1,6 @@
+.see-more-link {
+  @include link;
+  font-size: 16px;
+  line-height: 130%;
+  border-bottom: 1px solid $brown;
+}

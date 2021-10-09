@@ -10,7 +10,7 @@
   <link rel="preload" href="js/main.js" as="script">
   <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
   <div class="wrapper">
@@ -79,6 +79,243 @@
         <h2>PERFECTION</h2>
         <p>made to be yours</p>
       </section>
+
+      <section class="new-products">
+        <h2>New In</h2>
+        <div class="new-products__toggle">
+          <button type="button" class="new-products__left-button" aria-label="Сlick here to switch to the left">
+            <svg width="30" height="11" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite_auto.svg#icon-left-arrow"></use>
+            </svg>
+          </button>
+          <button type="button" class="new-products__right-button" aria-label="Сlick here to switch to the right">
+            <svg width="30" height="11" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite_auto.svg#icon-right-arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <a href="#" class="new-products__link see-more-link">Shop Now</a>
+        <ul class="new-products__list products-list">
+          <li class="products-list__item">
+            <div class="products-list__image">
+              <picture>
+                <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                <source type="image/webp" srcset="img/card-8.webp 1x, img/card-8@2x.webp 2x">
+                <img src="img/card-8.jpg" srcset="img/card-8@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+              </picture>
+            </div>
+            <div class="products-list__content">
+              <h3>Necklace with amethyst</h3>
+              <p>$ 145</p>
+            </div>
+          </li>
+          <li class="products-list__item">
+            <div class="products-list__image">
+              <picture>
+                <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                <source type="image/webp" srcset="img/card-13.webp 1x, img/card-13@2x.webp 2x">
+                <img src="img/card-13.jpg" srcset="img/card-13@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+              </picture>
+            </div>
+            <div class="products-list__content">
+              <h3>Layered сhoker</h3>
+              <p>$ 115</p>
+            </div>
+          </li>
+          <li class="products-list__item">
+            <div class="products-list__image">
+              <picture>
+                <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                <source type="image/webp" srcset="img/card-14.webp 1x, img/card-14@2x.webp 2x">
+                <img src="img/card-14.jpg" srcset="img/card-14@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+              </picture>
+            </div>
+            <div class="products-list__content">
+              <h3>Gold chain</h3>
+              <p>$ 215</p>
+            </div>
+          </li>
+          <li class="products-list__item">
+            <div class="products-list__image">
+              <picture>
+                <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                <source type="image/webp" srcset="img/card-15.webp 1x, img/card-15@2x.webp 2x">
+                <img src="img/card-15.jpg" srcset="img/card-15@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+              </picture>
+            </div>
+            <div class="products-list__content">
+              <h3>Galaxy earrings</h3>
+              <p>$ 95</p>
+            </div>
+          </li>
+        </ul>
+        <ul class="new-products__pagination pagination-list">
+          <li class="pagination-list__item">
+            <a href="#" class="pagination-list__link pagination-list__link--active">1</a>
+          </li>
+          <li class="pagination-list__item">
+            <a href="#" class="pagination-list__link">2</a>
+          </li>
+          <li class="pagination-list__item">
+            <a href="#" class="pagination-list__link">3</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="blog">
+        <div class="blog__wrap container">
+          <h2>Blog</h2>
+          <a href="#" class="blog__read-all-link see-more-link">Read All</a>
+          <ul class="blog__list">
+            <li class="blog__item">
+              <div class="blog__image">
+                <picture>
+                  <!-- 1х: 285px*300px; 2x: 570px*600px -->
+                  <source type="image/webp" srcset="img/blog-1.webp 1x, img/blog-1@2x.webp 2x">
+                  <img src="img/blog-1.jpg" srcset="img/blog-1@2x.jpg 2x" width="285" height="300" alt="The jewellerys are depicted in this picture">
+                </picture>
+              </div>
+              <div class="blog__content">
+                <p>September 30, 2019</p>
+                <h3>How to care for your jewellery</h3>
+                <a href="#" class="blog__read-article-link see-more-link">Read Article</a>
+              </div>
+            </li>
+            <li class="blog__item blog__item--big">
+              <div class="blog__image">
+                <picture>
+                  <!-- 1х: 570px*630px; 2x: 1140px*1260px -->
+                  <source type="image/webp" srcset="img/blog-2.webp 1x, img/blog-2@2x.webp 2x">
+                  <img src="img/blog-2.jpg" srcset="img/blog-2@2x.jpg 2x" width="570" height="630" alt="A woman in jewellry">
+                </picture>
+              </div>
+              <div class="blog__content">
+                <p>September 16, 2019</p>
+                <h3>AW 19 trends</h3>
+                <a href="#" class="blog__read-article-link see-more-link">Read Article</a>
+              </div>
+            </li>
+            <li class="blog__item">
+              <div class="blog__image">
+                <picture>
+                  <!-- 1х: 285px*300px; 2x: 570px*600px -->
+                  <source type="image/webp" srcset="img/blog-3.webp 1x, img/blog-3@2x.webp 2x">
+                  <img src="img/blog-3.jpg" srcset="img/blog-3@2x.jpg 2x" width="285" height="300" alt="The crystals are depicted in this picture">
+                </picture>
+              </div>
+              <div class="blog__content">
+                <p>September 23, 2019</p>
+                <h3>Power of crystals</h3>
+                <a href="#" class="blog__read-article-link see-more-link">Read Article</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="faq__wrap container">
+          <h2>Frequently asked questions</h2>
+          <ul class="faq__list">
+            <li class="faq__item">
+              <h3>What materials are the jewellery made of?</h3>
+              <div class="faq__content">
+                <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <h3>Which countries do you deliver to?</h3>
+              <div class="faq__content">
+                <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals. Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <h3>What are the payment methods?</h3>
+              <div class="faq__content">
+                <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+                <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals. Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <h3>Can I return the jewellery if it didn’t fit me?</h3>
+              <div class="faq__content">
+                <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2>@Chjewellery</h2>
+        <a href="#" class="gallery__link see-more-link">Follow Us</a>
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <div class="image">
+              <picture>
+                <!-- 1х: 230px*230px; 2x: 460px*460px -->
+                <source type="image/webp" srcset="img/photo-1.webp 1x, img/photo-1@2x.webp 2x">
+                <img src="img/photo-1.jpg" srcset="img/photo-1@2x.jpg 2x" width="230" height="230" alt="Our earrings">
+              </picture>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <div class="image">
+              <picture>
+                <!-- 1х: 399px*412px; 2x: 798px*824px -->
+                <source type="image/webp" srcset="img/photo-2.webp 1x, img/photo-2@2x.webp 2x">
+                <img src="img/photo-2.jpg" srcset="img/photo-2@2x.jpg 2x" width="399" height="412" alt="Beautiful Elina">
+              </picture>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <div class="image">
+              <picture>
+                <!-- 1х: 230px*230px; 2x: 460px*460px -->
+                <source type="image/webp" srcset="img/photo-3.webp 1x, img/photo-3@2x.webp 2x">
+                <img src="img/photo-3.jpg" srcset="img/photo-3@2x.jpg 2x" width="230" height="230" alt="Gold bracelets">
+              </picture>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <div class="image">
+              <picture>
+                <!-- 1х: 230px*230px; 2x: 460px*460px -->
+                <source type="image/webp" srcset="img/photo-4.webp 1x, img/photo-4@2x.webp 2x">
+                <img src="img/photo-4.jpg" srcset="img/photo-4@2x.jpg 2x" width="230" height="230" alt="These earrings are suitable for any event">
+              </picture>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <div class="image">
+              <picture>
+                <!-- 1х: 230px*150px; 2x: 460px*300px -->
+                <source type="image/webp" srcset="img/photo-5.webp 1x, img/photo-5@2x.webp 2x">
+                <img src="img/photo-5.jpg" srcset="img/photo-5@2x.jpg 2x" width="230" height="150" alt="We have a large selection of precious stones">
+              </picture>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <div class="image">
+              <picture>
+                <!-- 1х: 230px*150px; 2x: 460px*300px -->
+                <source type="image/webp" srcset="img/photo-6.webp 1x, img/photo-6@2x.webp 2x">
+                <img src="img/photo-6.jpg" srcset="img/photo-6@2x.jpg 2x" width="230" height="150" alt="Сollect your jewelry collection">
+              </picture>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <div class="image">
+              <picture>
+                <!-- 1х: 230px*150px; 2x: 460px*300px -->
+                <source type="image/webp" srcset="img/photo-7.webp 1x, img/photo-7@2x.webp 2x">
+                <img src="img/photo-7.jpg" srcset="img/photo-7@2x.jpg 2x" width="230" height="150" alt="The picture shows women's hands in rings">
+              </picture>
+            </div>
+          </li>
+        </ul>
+      </section>
+
     </main>
 
     <footer class="footer">
@@ -87,7 +324,7 @@
           <h2>The good stuff<br> in your inbox</h2>
           <p>News and updates from CH.<br> No spam, we promise.</p>
           <form class="footer__form-news" method="post" action="https://echo.htmlacademy.ru/">
-            <div class="form__field">
+            <div class="footer__form-field">
               <label for="email"><span class="visually-hidden">Your E-mail</span></label>
               <input type="email" name="email" id="email" placeholder="Your E-mail">
             </div>
