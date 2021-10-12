@@ -54,7 +54,7 @@
 
 .faq__item h3 {
   @include off-margin;
-  padding: 9px 40px 9px 0;
+  padding: 9px 50px 9px 0;
   font-size: 18px;
   line-height: 130%;
   position: relative;
@@ -83,7 +83,7 @@
 
   @media (max-width: $tablet-max-width) {
     margin-bottom: 20px;
-    padding: 9px 40px 9px 6px;
+    padding: 9px 50px 9px 6px;
 
     &::before {
       right: 11px;
@@ -116,19 +116,18 @@
 }
 
 .faq__content p {
-  margin: 0 0 7px 11px;
-  width: 525px;
+  margin: 0 360px 7px 11px;
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
 
   @media (max-width: $tablet-max-width) {
-    width: 530px;
+    margin: 0 55px 7px 11px;
   }
 
   @media (max-width: $mobile-max-width) {
-    margin: 0 0 7px 21px;
-    width: 207px;
+    margin: 0 60px 7px 21px;
+    width: auto;
     font-size: 14px;
     line-height: 140%;
   }
@@ -143,7 +142,7 @@
 }
 
 .faq__item--js h3 {
-  padding: 20px 40px 20px 0;
+  padding: 20px 50px 20px 0;
 
   &::before {
     background-image: url("../img/down-arrow.svg");
@@ -151,11 +150,11 @@
 
   @media (max-width: $tablet-max-width) {
     margin-bottom: 0;
-    padding: 20px 40px 20px 6px;
+    padding: 20px 50px 20px 6px;
   }
 
   @media (max-width: $mobile-max-width) {
-    padding: 20px 40px 17px 23px;
+    padding: 20px 60px 17px 23px;
 
     &::before {
       top: 23px;
@@ -181,7 +180,7 @@
 }
 
 .faq__item--active h3 {
-  padding: 9px 40px 9px 0;
+  padding: 9px 50px 9px 0;
 
   &::before {
     background-image: url("../img/up-arrow.svg");
@@ -189,7 +188,7 @@
 
   @media (max-width: $tablet-max-width) {
     margin-bottom: 20px;
-    padding: 9px 40px 9px 6px;
+    padding: 9px 50px 9px 6px;
   }
 
   @media (max-width: $mobile-max-width) {

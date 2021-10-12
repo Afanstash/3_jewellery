@@ -1,0 +1,12 @@
+.products-list {
+  @include off-list;
+  margin: 0 0 22px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 30px;
+}
+
+.products-list__item {
+  // padding: 0 15px;
+}

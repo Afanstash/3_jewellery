@@ -1,5 +1,5 @@
 .main-nav {
-  padding: 19px 0 18px;
+  padding: 19px 45px 8px;
 
   @media (max-width: $tablet-max-width) {
     padding: 10px 45px 74px;
@@ -17,12 +17,46 @@
   }
 }
 
-.main-nav__form-search {
+.main-nav__button-menu {
   display: none;
 
   @media (max-width: $tablet-max-width) {
+    @include button(transparent);
+    stroke: $dark;
+    position: absolute;
+    top: 54px;
+    left: 45px;
+
+    &:hover,
+    &:focus {
+      stroke: $brown;
+    }
+
+    &:active {
+      stroke: $light-brown;
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    top: 37px;
+    left: 15px;
+  }
+}
+
+
+.main-nav__form-search {
+  position: absolute;
+  top: 32px;
+  left: -12px;
+  display: flex;
+  width: 300px;
+
+  @media (max-width: $tablet-max-width) {
+    position: relative;
+    top: 0;
+    left: 0;
     margin-bottom: 46px;
-    display: flex;
+    width: auto;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -32,12 +66,27 @@
 
 .main-nav__form-search input {
   @include input;
+  padding: 10px 12px 9px 41px;
   flex: 1 1 auto;
 
   &:hover,
   &:focus {
     color: $brown;
     background-color: $white;
+  }
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding: 10px 12px 9px 35px;
   }
 }
 
@@ -47,13 +96,22 @@
   &::before {
     position: absolute;
     content: "";
-    width: 16px;
-    height: 16px;
-    top: 13px;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    transform: translate(0, -50%);
     left: 12px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.627 11.513 16 14.886 14.886 16l-3.373-3.373a7.057 7.057 0 0 1-4.424 1.55A7.091 7.091 0 0 1 0 7.09 7.091 7.091 0 0 1 7.089 0a7.091 7.091 0 0 1 7.088 7.089 7.057 7.057 0 0 1-1.55 4.424Zm-1.58-.585a5.495 5.495 0 0 0 1.555-3.84A5.512 5.512 0 0 0 7.09 1.576 5.511 5.511 0 0 0 1.575 7.09a5.512 5.512 0 0 0 5.514 5.513 5.495 5.495 0 0 0 3.84-1.555l.118-.119Z' fill='%23fff'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.048 10.074 14 13.024l-.975.976-2.951-2.952A6.205 6.205 0 0 1 0 6.202 6.205 6.205 0 0 1 6.203 0a6.205 6.205 0 0 1 4.845 10.074Zm-1.382-.512a4.808 4.808 0 0 0 1.36-3.36 4.823 4.823 0 0 0-4.823-4.824 4.822 4.822 0 0 0-4.825 4.825 4.823 4.823 0 0 0 4.825 4.824 4.808 4.808 0 0 0 3.36-1.361l.103-.104Z' fill='%23000'/%3E%3C/svg%3E");
+  }
+
+  @media (max-width: $tablet-max-width) {
+    &::before {
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.627 11.513 16 14.886 14.886 16l-3.373-3.373a7.057 7.057 0 0 1-4.424 1.55A7.091 7.091 0 0 1 0 7.09 7.091 7.091 0 0 1 7.089 0a7.091 7.091 0 0 1 7.088 7.089 7.057 7.057 0 0 1-1.55 4.424Zm-1.58-.585a5.495 5.495 0 0 0 1.555-3.84A5.512 5.512 0 0 0 7.09 1.576 5.511 5.511 0 0 0 1.575 7.09a5.512 5.512 0 0 0 5.514 5.513 5.495 5.495 0 0 0 3.84-1.555l.118-.119Z' fill='%23fff'/%3E%3C/svg%3E");
+    }
   }
 }
 
@@ -63,6 +121,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   font-size: 16px;
   line-height: 24px;
 
@@ -81,6 +140,7 @@
 
 .main-nav__item {
   margin-right: 35px;
+  margin-bottom: 10px;
 
   &:last-child {
     margin-right: 0;
@@ -126,8 +186,25 @@
   }
 }
 
+.main-nav__user-block {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (max-width: $tablet-max-width) {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
+
 .main-nav__link-login {
-  display: none;
+  @include link;
 
   @media (max-width: $tablet-max-width) {
     display: block;
@@ -143,5 +220,13 @@
     &:active {
       color: $light-brown;
     }
+  }
+}
+
+.main-nav__user-block p {
+  margin-left: 38px;
+
+  @media (max-width: $tablet-max-width) {
+    display: none;
   }
 }

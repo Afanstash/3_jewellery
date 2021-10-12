@@ -1,0 +1,30 @@
+.pagination-list {
+  @include off-list;
+  margin: 0 -6px;
+  display: flex;
+  flex-direction: row;
+}
+
+.pagination-list__item {
+  margin: 0 0 12px;
+  padding: 0 6px;
+}
+
+.pagination-list__link {
+  display: block;
+  color: $grey;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $light-brown;
+  }
+}
+
+.pagination-list__link--active {
+  color: $dark;
+}

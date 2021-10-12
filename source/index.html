@@ -10,66 +10,60 @@
   <link rel="preload" href="js/main.js" as="script">
   <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
   <div class="wrapper">
 
     <header class="header">
-      <div class="header__wrap">
-        <div class="header__row header__row--menu-opened">
-          <div class="header__block container">
-            <div class="header__search">
-              <svg width="14" height="14" aria-hidden="true" focusable="false">
-                <use xlink:href="img/sprite_auto.svg#icon-search"></use>
-              </svg>
-              <a class="header__link-search" href="#">Type here to search</a>
-            </div>
-            <div class="header__menu">
-              <button class="header__button-menu" type="button" aria-label="Click to open or close the menu">
-                <svg width="25" height="18" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
+      <div class="container">
+        <div class="header__wrap">
+          <div class="header__row header__row--menu-opened">
+            <div class="header__block">
+              <a href="#" class="header__link-logo" tabindex="-1">
+                <svg width="66" height="66" aria-label="Our logo - CH">
+                  <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
                 </svg>
-              </button>
-            </div>
-            <a href="#" class="header__link-logo" tabindex="-1">
-              <svg width="66" height="66" aria-label="Our logo - CH">
-                <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-              </svg>
-            </a>
-            <div class="header__user-block">
-              <a href="#" class="header__link-login">Login</a>
-              <p>Cart 0</p>
-            </div>
-            <div class="header__mail">
-              <button class="header__button-mail" type="button">
-                <span class="visually-hidden">Mail</span>
-                <svg width="20" height="18" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
-                </svg>
-              </button>
+              </a>
+              <div class="header__mail">
+                <button class="header__button-mail" type="button">
+                  <span class="visually-hidden">Mail</span>
+                  <svg width="20" height="18" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-          </div>
-        <nav class="header__main-nav main-nav main-nav--opened main-nav--nojs">
-          <form class="main-nav__form-search" method="get" action="https://echo.htmlacademy.ru/">
-            <label for="search"><span class="visually-hidden">Search</span></label>
-            <input type="search" name="search" id="search">
-          </form>
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="#" class="main-nav__link">What’s new</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Chokers</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Necklaces</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Rings</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Earrings</a></li>
-          </ul>
-          <ul class="main-nav__list-contacts">
-            <li class="main-nav__item"><a href="#" class="main-nav__link">About CH</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Stores & Hours</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Contact Us</a></li>
-          </ul>
-          <a href="#" class="main-nav__link-login">Login</a>
-        </nav>
+          <nav class="header__main-nav main-nav main-nav--opened main-nav--nojs">
+            <button class="main-nav__button-menu" type="button" aria-label="Click to open or close the menu">
+              <svg width="25" height="18" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
+              </svg>
+            </button>
+            <form class="main-nav__form-search" method="get" action="https://echo.htmlacademy.ru/">
+              <label for="search"><span class="visually-hidden">Search</span></label>
+              <input type="search" name="search" id="search" placeholder="Type here to search">
+            </form>
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a href="#" class="main-nav__link">What’s new</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Chokers</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Necklaces</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Rings</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Earrings</a></li>
+            </ul>
+            <ul class="main-nav__list-contacts">
+              <li class="main-nav__item"><a href="#" class="main-nav__link">About CH</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Stores & Hours</a></li>
+              <li class="main-nav__item"><a href="#" class="main-nav__link">Contact Us</a></li>
+            </ul>
+            <div class="main-nav__user-block">
+                <a href="#" class="main-nav__link-login">Login</a>
+                <p>Cart 0</p>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -81,85 +75,107 @@
       </section>
 
       <section class="new-products">
-        <h2>New In</h2>
-        <div class="new-products__toggle">
-          <button type="button" class="new-products__left-button" aria-label="Сlick here to switch to the left">
-            <svg width="30" height="11" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite_auto.svg#icon-left-arrow"></use>
-            </svg>
-          </button>
-          <button type="button" class="new-products__right-button" aria-label="Сlick here to switch to the right">
-            <svg width="30" height="11" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite_auto.svg#icon-right-arrow"></use>
-            </svg>
-          </button>
+        <div class="new-products__wrap container">
+          <h2>New In</h2>
+          <div class="new-products__toggle">
+            <button type="button" class="new-products__left-button" aria-label="Сlick here to switch to the left">
+              <svg width="30" height="11" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite_auto.svg#icon-left-arrow"></use>
+              </svg>
+            </button>
+            <button type="button" class="new-products__right-button" aria-label="Сlick here to switch to the right">
+              <svg width="30" height="11" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite_auto.svg#icon-right-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <a href="catalog.html" class="new-products__link see-more-link">Shop Now</a>
+          <ul class="new-products__list products-list">
+            <li class="products-list__item">
+              <article class="card">
+                <div class="card__image">
+                  <picture>
+                    <!-- 1х: 130px*136px; 2x: 260px*272px -->
+                    <source type="image/webp" media="(max-width: 768px)" srcset="img/card-16-mobile.webp 1x, img/card-16-mobile@2x.webp 2x">
+                    <source media="(max-width: 768px)" srcset="img/card-16-mobile.jpg 1x, img/card-16-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px*340px; 2x: 648px*680px -->
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-16-tablet.webp 1x, img/card-16-tablet@2x.webp 2x">
+                    <source media="(max-width: 1023px)" srcset="img/card-16-tablet.jpg 1x, img/card-16-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source type="image/webp" srcset="img/card-16.webp 1x, img/card-16@2x.webp 2x">
+                    <img src="img/card-16.jpg" srcset="img/card-16@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
+                  </picture>
+                </div>
+                <div class="card__content">
+                  <h3>Necklace with amethyst</h3>
+                  <p>$ 145</p>
+                </div>
+              </article>
+            </li>
+            <li class="products-list__item">
+              <article class="card">
+                <div class="card__image">
+                  <picture>
+                    <!-- 1х: 130px*136px; 2x: 260px*272px -->
+                    <source type="image/webp" media="(max-width: 768px)" srcset="img/card-13-mobile.webp 1x, img/card-13-mobile@2x.webp 2x">
+                    <source media="(max-width: 768px)" srcset="img/card-13-mobile.jpg 1x, img/card-13-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px*340px; 2x: 648px*680px -->
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/card-13-tablet.webp 1x, img/card-13-tablet@2x.webp 2x">
+                    <source media="(max-width: 1023px)" srcset="img/card-13-tablet.jpg 1x, img/card-13-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source type="image/webp" srcset="img/card-13.webp 1x, img/card-13@2x.webp 2x">
+                    <img src="img/card-13.jpg" srcset="img/card-13@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
+                  </picture>
+                </div>
+                <div class="card__content">
+                  <h3>Layered сhoker</h3>
+                  <p>$ 115</p>
+                </div>
+              </article>
+            </li>
+            <li class="products-list__item">
+              <article class="card">
+                <div class="card__image">
+                  <picture>
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source type="image/webp" srcset="img/card-14.webp 1x, img/card-14@2x.webp 2x">
+                    <img src="img/card-14.jpg" srcset="img/card-14@2x.jpg 2x" width="270" height="284" alt="Gold chain">
+                  </picture>
+                </div>
+                <div class="card__content">
+                  <h3>Gold chain</h3>
+                  <p>$ 215</p>
+                </div>
+              </article>
+            </li>
+            <li class="products-list__item">
+              <article class="card">
+                <div class="card__image">
+                  <picture>
+                    <!-- 1х: 270px*284px; 2x: 540px*568px -->
+                    <source type="image/webp" srcset="img/card-15.webp 1x, img/card-15@2x.webp 2x">
+                    <img src="img/card-15.jpg" srcset="img/card-15@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
+                  </picture>
+                </div>
+                <div class="card__content">
+                  <h3>Galaxy earrings</h3>
+                  <p>$ 95</p>
+                </div>
+              </article>
+            </li>
+          </ul>
+          <ul class="new-products__pagination pagination-list">
+            <li class="pagination-list__item">
+              <a href="#" class="pagination-list__link pagination-list__link--active">1</a>
+            </li>
+            <li class="pagination-list__item">
+              <a href="#" class="pagination-list__link">2</a>
+            </li>
+            <li class="pagination-list__item">
+              <a href="#" class="pagination-list__link">3</a>
+            </li>
+          </ul>
         </div>
-        <a href="#" class="new-products__link see-more-link">Shop Now</a>
-        <ul class="new-products__list products-list">
-          <li class="products-list__item">
-            <div class="products-list__image">
-              <picture>
-                <!-- 1х: 270px*284px; 2x: 540px*568px -->
-                <source type="image/webp" srcset="img/card-8.webp 1x, img/card-8@2x.webp 2x">
-                <img src="img/card-8.jpg" srcset="img/card-8@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst">
-              </picture>
-            </div>
-            <div class="products-list__content">
-              <h3>Necklace with amethyst</h3>
-              <p>$ 145</p>
-            </div>
-          </li>
-          <li class="products-list__item">
-            <div class="products-list__image">
-              <picture>
-                <!-- 1х: 270px*284px; 2x: 540px*568px -->
-                <source type="image/webp" srcset="img/card-13.webp 1x, img/card-13@2x.webp 2x">
-                <img src="img/card-13.jpg" srcset="img/card-13@2x.jpg 2x" width="270" height="284" alt="Layered сhoker">
-              </picture>
-            </div>
-            <div class="products-list__content">
-              <h3>Layered сhoker</h3>
-              <p>$ 115</p>
-            </div>
-          </li>
-          <li class="products-list__item">
-            <div class="products-list__image">
-              <picture>
-                <!-- 1х: 270px*284px; 2x: 540px*568px -->
-                <source type="image/webp" srcset="img/card-14.webp 1x, img/card-14@2x.webp 2x">
-                <img src="img/card-14.jpg" srcset="img/card-14@2x.jpg 2x" width="270" height="284" alt="Gold chain">
-              </picture>
-            </div>
-            <div class="products-list__content">
-              <h3>Gold chain</h3>
-              <p>$ 215</p>
-            </div>
-          </li>
-          <li class="products-list__item">
-            <div class="products-list__image">
-              <picture>
-                <!-- 1х: 270px*284px; 2x: 540px*568px -->
-                <source type="image/webp" srcset="img/card-15.webp 1x, img/card-15@2x.webp 2x">
-                <img src="img/card-15.jpg" srcset="img/card-15@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings">
-              </picture>
-            </div>
-            <div class="products-list__content">
-              <h3>Galaxy earrings</h3>
-              <p>$ 95</p>
-            </div>
-          </li>
-        </ul>
-        <ul class="new-products__pagination pagination-list">
-          <li class="pagination-list__item">
-            <a href="#" class="pagination-list__link pagination-list__link--active">1</a>
-          </li>
-          <li class="pagination-list__item">
-            <a href="#" class="pagination-list__link">2</a>
-          </li>
-          <li class="pagination-list__item">
-            <a href="#" class="pagination-list__link">3</a>
-          </li>
-        </ul>
       </section>
 
       <section class="blog">
@@ -432,6 +448,7 @@
     </footer>
   </div>
 
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>
