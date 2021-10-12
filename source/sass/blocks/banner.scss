@@ -1,5 +1,5 @@
 .banner {
-  padding: 182px 0 181px;
+  padding: 182px 0 182px;
   text-align: center;
   color: $white;
   background-image: url("../img/index-banner.jpg");
@@ -33,7 +33,9 @@
 
 .banner h2 {
   @include fonts-title-h2;
+  color: $white;
   margin: 0 0 -8px;
+  padding: 0 45px;
   font-size: 45px;
 
   @media (max-width: $tablet-max-width) {
@@ -48,6 +50,7 @@
 
 .banner p {
   @include off-margin;
+  padding: 0 45px;
   font-family: "Cormorant Garamond", "Georgia", serif;
   font-style: italic;
   font-weight: 400;
@@ -61,5 +64,62 @@
   @media (max-width: $mobile-max-width) {
     margin-right: 0;
     font-size: 34px;
+  }
+}
+
+.banner--catalog-page {
+  padding: 92px 0 95px;
+  background-image: url("../img/catalog-banner.jpg");
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/catalog-banne@2x.jpg");
+  }
+
+  @media (max-width: $tablet-max-width) {
+    padding: 92px 0 97px;
+    background-image: url("../img/catalog-banner-tablet.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/catalog-banner-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 79px 0 84px;
+    background-image: url("../img/catalog-banner-mobile.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/catalog-banner-mobile@2x.jpg");
+    }
+  }
+}
+
+.banner--catalog-page h2 {
+  margin-bottom: 2px;
+  font-size: 34px;
+  letter-spacing: normal;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 0;
+    padding: 0 15px;
+  }
+}
+
+.banner--catalog-page p {
+  font-weight: 500;
+  font-size: 22px;
+
+  @media (max-width: $tablet-max-width) {
+    line-height: 120%;
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 0;
+    padding: 0 15px;
   }
 }
