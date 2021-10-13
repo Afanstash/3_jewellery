@@ -1,40 +1,260 @@
 .filter {
   grid-column: 1 / 4;
   padding: 0;
-  background-color: $grey;
+  background-color: $white;
   display: flex;
   flex-direction: column;
 }
 
-.filter__button {
+.filter__button,
+.filter__button-submit,
+.filter__button-reset {
   @include button($brown);
-  margin-bottom: 40px;
-  padding: 28px;
   border: 1px solid $brown;
-  color: $white;
   font-size: 16px;
   line-height: 130%;
   font-style: normal;
   font-weight: 500;
   font-family: "Poppins", "Arial", sans-serif;
-  display: flex;
-  justify-content: center;
 
   &:hover,
   &:focus {
-    color: $grey;
+    color: $dark;
+    background-color: $light-brown;
   }
 
   &:active {
-    color: $light-brown;
+    color: $grey;
   }
+}
+
+.filter__button {
+  margin-bottom: 40px;
+  padding: 28px;
+  color: $white;
+  display: none;
 
   @media (max-width: $tablet-max-width) {
+    display: flex;
+    justify-content: center;
     margin-bottom: 50px;
     padding: 24px 24px 22px;
   }
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 40px;
+  }
+}
+
+.filter__button-submit,
+.filter__button-reset {
+  padding: 23px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter__button-submit {
+  margin-bottom: 25px;
+  color: $white;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.filter__button-reset {
+  color: $dark;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $grey;
+  }
+}
+
+.filter__form {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet-max-width) {
+    // display: none;
+  }
+}
+
+.filter__form-list {
+  @include off-list;
+  margin-bottom: 35px;
+  border: 1px solid $brown;
+}
+
+.filter__form-item {
+  padding: 13px 0 9px;
+  border-bottom: 1px solid $brown;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.filter__form-item h3 {
+  @include off-margin;
+  padding: 10px 50px 10px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  cursor: pointer;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $light-brown;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 23px;
+    width: 17px;
+    height: 10px;
+    background-image: url("../img/up-arrow.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.filter__form-item--js h3 {
+  &::before {
+    background-image: url("../img/down-arrow.svg");
+  }
+
+  @media (max-width: $mobile-max-width) {
+    &::before {
+      top: 23px;
+      right: 25px;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.filter__form-item--js .filter__form-content {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  display: none;
+}
+
+.filter__form-item--js.filter__form-item {
+  padding: 13px 0 13px;
+}
+
+.filter__form-item--active.filter__form-item {
+  padding: 13px 0 9px;
+}
+
+.filter__form-item--active h3 {
+  &::before {
+    background-image: url("../img/up-arrow.svg");
+  }
+}
+
+
+.filter__form-item--active .filter__form-content {
+  display: block;
+  height: auto;
+}
+
+
+.filter__form-content {
+  @include off-list;
+  padding: 15px 33px;
+}
+
+.filter__form-field {
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filter__form-field label {
+  padding: 0 0 0 27px;
+  font-size: 14px;
+  line-height: 130%;
+  cursor: pointer;
+  display: block;
+  user-select: none;
+  position: relative;
+}
+
+.filter__form-field input {
+  & + label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid $brown;
+  }
+
+  &:hover + label::before,
+  &:focus + label::before {
+    border-color: $dark;
+  }
+
+  &:hover + label,
+  &:focus + label {
+    color: $brown;
+  }
+
+  &:active + label::before {
+    background-color: $light-brown;
+  }
+
+  &:active + label {
+    color: $grey;
+  }
+
+  &:disabled + label::before {
+    border-color: $grey;
+  }
+
+  &:disabled + label {
+    opacity: 0.5;
+  }
+
+  &:checked + label::before {
+    background-color: $brown;
+  }
+
+  &:checked:hover + label::before,
+  &:checked:focus + label::before {
+    border-color: $dark;
+  }
+
+  &:checked:active + label::before {
+    background-color: $light-brown;
+  }
+
+  &:checked:disabled + label::before {
+    border-color: $grey;
+    opacity: 0.8;
+  }
+
+  &:checked:disabled + label {
+    opacity: 0.5;
   }
 }

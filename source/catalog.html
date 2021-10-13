@@ -80,7 +80,75 @@
           <section class="filter">
             <h2 class="visually-hidden">Filter</h2>
             <button class="filter__button" type="button">Filter</button>
-            <form class="filter__form" method="post" action="https://echo.htmlacademy.ru/"></form>
+            <form class="filter__form" method="get" action="https://echo.htmlacademy.ru/">
+              <ul class="filter__form-list">
+                <li class="filter__form-item filter__form-item--active" tabindex="0">
+                  <h3>Product</h3>
+                  <ul class="filter__form-content">
+                    <li class="filter__form-field">
+                      <input class="visually-hidden" type="checkbox" name="products" value="necklaces" id="filter-necklaces" checked="">
+                      <label for="filter-necklaces">Necklaces</label>
+                    </li>
+                    <li class="filter__form-field">
+                      <input class="visually-hidden" type="checkbox" name="products" value="chokers" id="filter-chokers" checked="">
+                      <label for="filter-chokers">Chokers</label>
+                    </li>
+                    <li class="filter__form-field">
+                      <input class="visually-hidden" type="checkbox" name="products" value="rings" id="filter-rings">
+                      <label for="filter-rings">Rings</label>
+                    </li>
+                    <li class="filter__form-field">
+                      <input class="visually-hidden" type="checkbox" name="products" value="earrings" id="filter-earrings" checked="">
+                      <label for="filter-earrings">Earrings</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="filter__form-item" tabindex="0">
+                  <h3>Material</h3>
+                  <ul class="filter__form-content">
+                    <li class="filter__form-field">
+                      <input class="visually-hidden" type="checkbox" name="material" value="gold" id="filter-gold" checked="">
+                      <label for="filter-gold">Gold</label>
+                    </li>
+                    <li class="filter__form-field">
+                      <input class="visually-hidden" type="checkbox" name="material" value="silver" id="filter-silver">
+                      <label for="filter-silver">Silver</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="filter__form-item" tabindex="0">
+                  <h3>Collection</h3>
+                  <ul class="filter__form-content">
+                    <li class="filter__form-field">
+                      <input class="visually-hidden" type="checkbox" name="collection" value="pink-flamingo" id="filter-pink-flamingo" checked="">
+                      <label for="filter-pink-flamingo">Pink flamingo</label>
+                    </li>
+                    <li class="filter__form-field">
+                      <input class="visually-hidden" type="checkbox" name="collection" value="dreams" id="filter-dreams">
+                      <label for="filter-dreams">Dreams</label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="filter__form-item filter__form-item--active" tabindex="0">
+                  <h3>Price</h3>
+                  <div class="filter__form-content">
+                    <div class="range-controls">
+                      <div class="range-controls__scale">
+                        <div class="range-controls__bar"></div>
+                      </div>
+                      <div class="range-controls__toggle range-controls__toggle--min" tabindex="0"></div>
+                      <div class="range-controls__toggle range-controls__toggle--max" tabindex="0"></div>
+                      <div class="range-controls__price">
+                        <span class="range-controls__number range-controls__number--min">$ 55</span>
+                        <span class="range-controls__number">$ 155</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <button class="filter__button-submit" type="submit">Apply</button>
+              <button class="filter__button-reset" type="reset">Clear All</button>
+            </form>
           </section>
 
           <section class="products">
@@ -101,7 +169,7 @@
                       <img src="img/card-1.jpg" srcset="img/card-1@2x.jpg 2x" width="270" height="272" alt="Double pearl earrings">
                     </picture>
                   </div>
-                  <div class="card__content">
+                  <div class="card__content card__content--margin-left">
                     <h3>Double pearl earrings</h3>
                     <p>$ 115</p>
                   </div>
@@ -143,7 +211,7 @@
                       <img src="img/card-3.jpg" srcset="img/card-3@2x.jpg 2x" width="270" height="272" alt="Gold layered necklace">
                     </picture>
                   </div>
-                  <div class="card__content">
+                  <div class="card__content card__content--margin-left">
                     <h3>Gold layered necklace</h3>
                     <p>$ 155</p>
                   </div>
@@ -332,7 +400,7 @@
                       <img src="img/card-12.jpg" srcset="img/card-12@2x.jpg 2x" width="270" height="272" alt="Marble earrings">
                     </picture>
                   </div>
-                  <div class="card__content">
+                  <div class="card__content card__content--margin-left">
                     <h3>Marble earrings</h3>
                     <p>$ 95</p>
                   </div>

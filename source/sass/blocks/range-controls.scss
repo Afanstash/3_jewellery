@@ -1,0 +1,57 @@
+.range-controls {
+  padding: 2px 0;
+  position: relative;
+}
+
+.range-controls__scale {
+  width: 100%;
+  height: 1px;
+  background-color: $light-brown;
+}
+
+.range-controls__bar {
+  margin-left: 20%;
+  width: 64%;
+  height: 1px;
+  background-color: $brown;
+}
+
+.range-controls__toggle {
+  cursor: pointer;
+  position: absolute;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: $brown;
+  border-radius: 50%;
+}
+
+.range-controls__toggle:hover,
+.range-controls__toggle:focus {
+  width: 17px;
+  height: 17px;
+  background-color: $dark;
+}
+
+.range-controls__toggle--min {
+  left: 20%;
+}
+
+.range-controls__toggle--max {
+  right: 15%;
+}
+
+.range-controls__price {
+  margin-top: 13px;
+  margin-bottom: -8px;
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 130%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.range-controls__number--min {
+  margin-left: 14px;
+}
