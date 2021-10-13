@@ -3,11 +3,19 @@
   margin: 0 -6px;
   display: flex;
   flex-direction: row;
+
+  @media (max-width: $mobile-max-width) {
+    margin: 0 -11px;
+  }
 }
 
 .pagination-list__item {
   margin: 0 0 12px;
   padding: 0 6px;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 11px;
+  }
 }
 
 .pagination-list__link {

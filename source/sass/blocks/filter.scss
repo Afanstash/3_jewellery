@@ -1,0 +1,40 @@
+.filter {
+  grid-column: 1 / 4;
+  padding: 0;
+  background-color: $grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__button {
+  @include button($brown);
+  margin-bottom: 40px;
+  padding: 28px;
+  border: 1px solid $brown;
+  color: $white;
+  font-size: 16px;
+  line-height: 130%;
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Poppins", "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+
+  &:hover,
+  &:focus {
+    color: $grey;
+  }
+
+  &:active {
+    color: $light-brown;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 50px;
+    padding: 24px 24px 22px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 40px;
+  }
+}

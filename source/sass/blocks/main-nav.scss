@@ -48,8 +48,6 @@
   position: absolute;
   top: 32px;
   left: -12px;
-  display: flex;
-  width: 300px;
 
   @media (max-width: $tablet-max-width) {
     position: relative;
@@ -61,6 +59,15 @@
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 37px;
+  }
+}
+
+.main-nav__form-field {
+  display: flex;
+  width: 300px;
+
+  @media (max-width: $tablet-max-width) {
+    width: auto;
   }
 }
 

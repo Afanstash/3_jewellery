@@ -1,12 +1,19 @@
 .products-list {
   @include off-list;
-  margin: 0 0 22px;
+  margin: 0 0 64px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-gap: 30px;
-}
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 
-.products-list__item {
-  // padding: 0 15px;
+  @media (max-width: $tablet-max-width) {
+    margin: 0 0 64px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin: 0 0 34px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+  }
 }

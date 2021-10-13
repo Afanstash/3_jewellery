@@ -1,0 +1,16 @@
+.catalog-wrapper {
+  padding: 80px 0 61px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 30px;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 50px 0 61px;
+    display: block;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 40px 0 51px;
+  }
+}

@@ -13,15 +13,24 @@
 
 /* Main */
 
+@import "blocks/card.scss";
+@import "blocks/pagination-list.scss";
+
+/* Index */
+
 @import "blocks/main.scss";
 @import "blocks/banner.scss";
 @import "blocks/new-products.scss";
 @import "blocks/products-list.scss";
-@import "blocks/card.scss";
-@import "blocks/pagination-list.scss";
 @import "blocks/blog.scss";
 @import "blocks/faq.scss";
 @import "blocks/gallery.scss";
+
+/* Catalog */
+
+@import "blocks/catalog-wrapper.scss";
+@import "blocks/filter.scss";
+@import "blocks/products.scss";
 
 /* Footer */
 
