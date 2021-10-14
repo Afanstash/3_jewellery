@@ -1,0 +1,111 @@
+.form-login {
+  padding: 5px 45px 54px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0 51px 54px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 5px 15px 39px;
+  }
+}
+
+.form-login__field {
+  margin-bottom: 25px;
+  padding: 4px 0;
+  flex: 1 1 auto;
+  display: flex;
+  border-bottom: 1px solid $dark;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 21px;
+  }
+}
+
+.form-login__field input {
+  @include input;
+  padding: 5px 15px;
+  border-radius: 10px;
+  flex: 1 1 auto;
+  background-color: transparent;
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:hover,
+  &:focus {
+    color: $brown;
+    background-color: $white;
+  }
+}
+
+.form-login__password-wrap {
+  margin-bottom: 43px;
+  position: relative;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 36px;
+  }
+}
+
+.form-login__link-forgot-password {
+  @include link;
+  font-size: 12px;
+  line-height: 18px;
+  color: $grey;
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active {
+    color: $dark;
+  }
+}
+
+.form-login__button-submit {
+  @include button($brown);
+  margin-bottom: 15px;
+  padding: 23px;
+  border: 1px solid $brown;
+  color: $white;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  &:hover,
+  &:focus {
+    color: $dark;
+    background-color: $light-brown;
+  }
+
+  &:active {
+    color: $grey;
+  }
+}
+
+.form-login p {
+  @include off-margin;
+  margin-left: -5px;
+  align-self: center;
+  text-align: center;
+  color: $grey;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.form-login__link-sign-up {
+  @include link;
+  margin-left: 3px;
+  display: initial;
+  color: $dark;
+}

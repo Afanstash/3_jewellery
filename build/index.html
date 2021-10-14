@@ -61,7 +61,7 @@
               <li class="main-nav__item"><a href="#" class="main-nav__link">Contact Us</a></li>
             </ul>
             <div class="main-nav__user-block">
-                <a href="#" class="main-nav__link-login">Login</a>
+                <a href="login.html" class="main-nav__link-login">Login</a>
                 <p>Cart 0</p>
             </div>
           </nav>
@@ -361,7 +361,7 @@
             </div> -->
             <!-- <ul class="new-products__pagination pagination-list">
               <li class="pagination-list__item">
-                <a href="#" class="pagination-list__link pagination-list__link--active">1</a>
+                <a href="#" class="pagination-list__link">1</a>
               </li>
               <li class="pagination-list__item">
                 <a href="#" class="pagination-list__link">2</a>
@@ -643,6 +643,34 @@
       </div>
     </footer>
   </div>
+
+  <section class="modal-form modal-form--hidden modal-form--position">
+    <div class="modal-form__wrap">
+      <button class="modal-form__button-close" type="button">
+        <span class="visually-hidden">Close</span>
+        <svg width="14" height="14" aria-hidden="true" focusable="false">
+          <use xlink:href="img/sprite_auto.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <div class="modal-form__image"></div>
+      <h2>Log In</h2>
+      <form class="modal-form__form form-login" method="post" action="https://echo.htmlacademy.ru/" autocomplete="off">
+        <div class="form-login__field">
+          <label class="visually-hidden" for="email-login"></label>
+          <input id="email-login" type="email" name="email-login" placeholder="Your E-mail" required="required">
+        </div>
+        <div class="form-login__password-wrap">
+          <div class="form-login__field">
+            <label class="visually-hidden" for="password"></label>
+            <input id="password" type="password" name="password" placeholder="Password" required="required">
+          </div>
+          <a class="form-login__link-forgot-password" href="#">Forgot your password?</a>
+        </div>
+        <button class="form-login__button-submit" type="submit">Log In</button>
+        <p>Don’t have an account? <a class="form-login__link-sign-up" href="#">Sign up</a></p>
+      </form>
+    </div>
+  </section>
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
