@@ -83,3 +83,59 @@ var accordionsFilter = document.querySelectorAll('.filter__form-item');
     }
   });
 })();
+
+/* eslint-disable */
+(function () {
+  // import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+  var swiper = new Swiper('.swiper', {
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: 'true',
+      // type: 'fraction',
+      // renderFraction: function (currentClass, totalClass) {
+      //   return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+      // },
+      breakpoints: {
+        320: {
+          type: 'fraction',
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+          },
+        },
+
+        1024: {
+          type: 'bullets',
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+        }
+      }
+    },
+
+    autoHeight: 'true',
+
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30,
+      },
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 30,
+      },
+    }
+  });
+})();

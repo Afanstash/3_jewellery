@@ -4,6 +4,10 @@
   background-color: $white;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .filter__button,
@@ -29,7 +33,6 @@
 }
 
 .filter__button {
-  margin-bottom: 40px;
   padding: 28px;
   color: $white;
   display: none;
@@ -43,6 +46,12 @@
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 40px;
+  }
+}
+
+.filter--closed .filter__button {
+  @media (max-width: $tablet-max-width) {
+    display: none;
   }
 }
 
