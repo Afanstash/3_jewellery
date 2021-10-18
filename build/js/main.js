@@ -13,35 +13,39 @@
   var navToggle = document.querySelector('.main-nav__button-menu');
   var headerRow = document.querySelector('.header__row');
   var header = document.querySelector('.header');
-  var filter = document.querySelector('.filter');
-  var filterButton = filter.querySelector('.filter__button');
 
-  filter.classList.remove('filter--nojs');
-  filter.classList.add('filter--closed');
+  if (document.querySelector('.filter')) {
+    var filter = document.querySelector('.filter');
+    var filterButton = filter.querySelector('.filter__button');
 
-  filterButton.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    if (filter.classList.contains('filter--closed')) {
-      filter.classList.remove('filter--closed');
-      filter.classList.add('filter--opened');
-      body.classList.add('lock');
-    } else {
-      filter.classList.add('filter--closed');
-      filter.classList.remove('filter--opened');
-      body.classList.remove('lock');
-    }
-  });
+    filter.classList.remove('filter--nojs');
+    filter.classList.add('filter--closed');
 
-  window.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === 27) {
-      if (filter.classList.contains('filter--opened')) {
-        evt.preventDefault();
+    filterButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      if (filter.classList.contains('filter--closed')) {
+        filter.classList.remove('filter--closed');
+        filter.classList.add('filter--opened');
+        body.classList.add('lock');
+      } else {
         filter.classList.add('filter--closed');
         filter.classList.remove('filter--opened');
         body.classList.remove('lock');
       }
-    }
-  });
+    });
+
+    window.addEventListener('keydown', function (evt) {
+      if (evt.keyCode === 27) {
+        if (filter.classList.contains('filter--opened')) {
+          evt.preventDefault();
+          filter.classList.add('filter--closed');
+          filter.classList.remove('filter--opened');
+          body.classList.remove('lock');
+        }
+      }
+    });
+
+  }
 
   navMain.classList.remove('main-nav--nojs');
   navMain.classList.add('main-nav--closed');
