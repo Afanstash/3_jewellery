@@ -76,6 +76,12 @@
   }
 }
 
+.main-nav.main-nav--opened {
+  @media (max-width: $tablet-max-width) {
+    min-height: 100vh;
+  }
+}
+
 .main-nav--opened .main-nav__button-menu {
   @media (max-width: $tablet-max-width) {
     stroke: $white;

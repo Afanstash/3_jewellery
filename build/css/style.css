@@ -388,6 +388,10 @@ a {
     display: block; } }
 
 @media (max-width: 1023px) {
+  .main-nav.main-nav--opened {
+    min-height: 100vh; } }
+
+@media (max-width: 1023px) {
   .main-nav--opened .main-nav__button-menu {
     stroke: white; }
     .main-nav--opened .main-nav__button-menu:hover, .main-nav--opened .main-nav__button-menu:focus {
