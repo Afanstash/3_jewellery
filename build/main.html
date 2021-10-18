@@ -8,8 +8,8 @@
   <title>Jewellery</title>
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="preload" href="js/main.js" as="script">
-  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
         <div class="header__wrap">
           <div class="header__row header__row--menu-nojs">
             <div class="header__block">
-              <a href="main.html" class="header__link-logo">
+              <a href="#" class="header__link-logo" tabindex="-1">
                 <svg width="66" height="66" aria-label="Our logo - CH">
                   <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
                 </svg>
@@ -69,97 +69,32 @@
     </header>
 
     <main class="main">
-      <h1 class="visually-hidden">Jewellery catalog</h1>
-      <section class="banner banner--catalog-page">
-        <h2>ALL JEWELLERY</h2>
-        <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+      <h1 class="visually-hidden">Jewellery</h1>
+      <section class="banner">
+        <h2>PERFECTION</h2>
+        <p>made to be yours</p>
       </section>
 
-      <div class="container">
-        <div class="catalog-wrapper">
-          <section class="filter filter--nojs">
-            <h2 class="visually-hidden">Filter</h2>
-            <form class="filter__form" method="get" action="https://echo.htmlacademy.ru/">
-              <button class="filter__button" type="button">
-                <span class="filter__button-name">Filter</span>
-                <svg width="32" height="32" aria-label="Close">
-                  <use xlink:href="img/sprite_auto.svg#icon-filter-close"></use>
-                </svg>
-              </button>
-              <ul class="filter__form-list">
-                <li class="filter__form-item filter__form-item--active" tabindex="0">
-                  <h3>Product</h3>
-                  <ul class="filter__form-content">
-                    <li class="filter__form-field">
-                      <input class="visually-hidden" type="checkbox" name="products" value="necklaces" id="filter-necklaces" checked="">
-                      <label for="filter-necklaces">Necklaces</label>
-                    </li>
-                    <li class="filter__form-field">
-                      <input class="visually-hidden" type="checkbox" name="products" value="chokers" id="filter-chokers" checked="">
-                      <label for="filter-chokers">Chokers</label>
-                    </li>
-                    <li class="filter__form-field">
-                      <input class="visually-hidden" type="checkbox" name="products" value="rings" id="filter-rings">
-                      <label for="filter-rings">Rings</label>
-                    </li>
-                    <li class="filter__form-field">
-                      <input class="visually-hidden" type="checkbox" name="products" value="earrings" id="filter-earrings" checked="">
-                      <label for="filter-earrings">Earrings</label>
-                    </li>
-                  </ul>
-                </li>
-                <li class="filter__form-item" tabindex="0">
-                  <h3>Material</h3>
-                  <ul class="filter__form-content">
-                    <li class="filter__form-field">
-                      <input class="visually-hidden" type="checkbox" name="material" value="gold" id="filter-gold" checked="">
-                      <label for="filter-gold">Gold</label>
-                    </li>
-                    <li class="filter__form-field">
-                      <input class="visually-hidden" type="checkbox" name="material" value="silver" id="filter-silver">
-                      <label for="filter-silver">Silver</label>
-                    </li>
-                  </ul>
-                </li>
-                <li class="filter__form-item" tabindex="0">
-                  <h3>Collection</h3>
-                  <ul class="filter__form-content">
-                    <li class="filter__form-field">
-                      <input class="visually-hidden" type="checkbox" name="collection" value="pink-flamingo" id="filter-pink-flamingo" checked="">
-                      <label for="filter-pink-flamingo">Pink flamingo</label>
-                    </li>
-                    <li class="filter__form-field">
-                      <input class="visually-hidden" type="checkbox" name="collection" value="dreams" id="filter-dreams">
-                      <label for="filter-dreams">Dreams</label>
-                    </li>
-                  </ul>
-                </li>
-                <li class="filter__form-item filter__form-item--active" tabindex="0">
-                  <h3>Price</h3>
-                  <div class="filter__form-content filter__form-content--price">
-                    <div class="range-controls">
-                      <div class="range-controls__scale">
-                        <div class="range-controls__bar"></div>
-                      </div>
-                      <div class="range-controls__toggle range-controls__toggle--min" tabindex="0"></div>
-                      <div class="range-controls__toggle range-controls__toggle--max" tabindex="0"></div>
-                      <div class="range-controls__price">
-                        <span class="range-controls__number range-controls__number--min">$ 55</span>
-                        <span class="range-controls__number range-controls__number--max">$ 155</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <button class="filter__button-submit" type="submit">Apply</button>
-              <button class="filter__button-reset" type="reset">Clear All</button>
-            </form>
-          </section>
-
-          <section class="products">
-            <h2 class="visually-hidden">Our products</h2>
-            <ul class="products-list">
-              <li class="products-list__item">
+      <section class="new-products">
+        <div class="new-products__wrap container">
+          <h2>New In</h2>
+          <div class="new-products__toggle">
+            <button class="new-products__left-button" type="button" aria-label="Сlick here to switch to the left">
+              <svg width="30" height="11" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite_auto.svg#icon-left-arrow"></use>
+              </svg>
+            </button>
+            <button class="new-products__right-button" type="button" aria-label="Сlick here to switch to the right">
+              <svg width="30" height="11" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite_auto.svg#icon-right-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <a href="catalog.html" class="new-products__link see-more-link">Shop Now</a>
+          <div class="swiper">
+            <div class="products-list swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -179,8 +114,8 @@
                     <p>$ 115</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -195,13 +130,13 @@
                       <img src="img/card-2.jpg" srcset="img/card-2@2x.jpg 2x" width="270" height="272" alt="Choker with gold bead">
                     </picture>
                   </div>
-                  <div class="card__content card__content--margin-left-price">
+                  <div class="card__content">
                     <h3>Choker with gold bead</h3>
                     <p>$ 55</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -221,8 +156,8 @@
                     <p>$ 155</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -242,8 +177,8 @@
                     <p>$ 105</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide swiper-slide--hidden">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -263,8 +198,8 @@
                     <p>$ 75</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide swiper-slide--hidden">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -284,8 +219,8 @@
                     <p>$ 135</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide swiper-slide--hidden">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -305,8 +240,8 @@
                     <p>$ 85</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide swiper-slide--hidden">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -326,8 +261,8 @@
                     <p>$ 145</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide swiper-slide--hidden">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -347,8 +282,8 @@
                     <p>$ 95</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide swiper-slide--hidden">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -368,8 +303,8 @@
                     <p>$ 115</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide swiper-slide--hidden">
                 <article class="card">
                   <div class="card__image">
                     <picture>
@@ -389,8 +324,8 @@
                     <p>$ 105</p>
                   </div>
                 </article>
-              </li>
-              <li class="products-list__item">
+              </div>
+              <div class="swiper-slide swiper-slide--hidden">
                 <article class="card card--big-width">
                   <div class="card__image">
                     <picture>
@@ -410,32 +345,220 @@
                     <p>$ 95</p>
                   </div>
                 </article>
+              </div>
+            </div>
+            <ul class="pagination-list">
+              <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link pagination-list__link--active">1</a>
+              </li>
+              <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link">2</a>
+              </li>
+              <li class="pagination-list__item">
+                <a href="#" class="pagination-list__link">3</a>
               </li>
             </ul>
-            <div class="products__pagination-wrap">
-              <button class="products__prev" type="button">Previous</button>
-              <ul class="products__pagination pagination-list">
-                <li class="pagination-list__item">
-                  <a href="#" class="pagination-list__link pagination-list__link--active">1</a>
-                </li>
-                <li class="pagination-list__item">
-                  <a href="#" class="pagination-list__link">2</a>
-                </li>
-                <li class="pagination-list__item">
-                  <a href="#" class="pagination-list__link">3</a>
-                </li>
-                <li class="pagination-list__item">
-                  <a href="#" class="pagination-list__link">4</a>
-                </li>
-                <li class="pagination-list__item">
-                  <a href="#" class="pagination-list__link">5</a>
-                </li>
-              </ul>
-              <button class="products__next" type="button">Next</button>
-            </div>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="blog">
+        <div class="blog__wrap container">
+          <h2>Blog</h2>
+          <a href="#" class="blog__read-all-link see-more-link">Read All</a>
+          <ul class="blog__list">
+            <li class="blog__item blog__item--first-tablet">
+              <div class="blog__image">
+                <picture>
+                  <!-- 1х: 290px*256px; 2x: 580px*512px -->
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/blog-1-mobile.webp 1x, img/blog-1-mobile@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="img/blog-1-mobile.jpg 1x, img/blog-1-mobile@2x.jpg 2x">
+                  <!-- 1х: 339px*300px; 2x: 678px*600px -->
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/blog-1-tablet.webp 1x, img/blog-1-tablet@2x.webp 2x">
+                  <source media="(max-width: 1023px)" srcset="img/blog-1-tablet.jpg 1x, img/blog-1-tablet@2x.jpg 2x">
+                  <!-- 1х: 285px*300px; 2x: 570px*600px -->
+                  <source type="image/webp" srcset="img/blog-1.webp 1x, img/blog-1@2x.webp 2x">
+                  <img src="img/blog-1.jpg" srcset="img/blog-1@2x.jpg 2x" width="285" height="300" alt="The jewellerys are depicted in this picture">
+                </picture>
+              </div>
+              <div class="blog__content">
+                <p>September 30, 2019</p>
+                <h3>How to care for your jewellery</h3>
+                <a href="#" class="blog__read-article-link see-more-link">Read Article</a>
+              </div>
+            </li>
+            <li class="blog__item blog__item--big-block blog__item--third-tablet">
+              <div class="blog__image">
+                <picture>
+                  <!-- 1х: 290px*256px; 2x: 580px*512px -->
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/blog-2-mobile.webp 1x, img/blog-2-mobile@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="img/blog-2-mobile.jpg 1x, img/blog-2-mobile@2x.jpg 2x">
+                  <!-- 1х: 339px*300px; 2x: 678px*600px -->
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/blog-2-tablet.webp 1x, img/blog-2-tablet@2x.webp 2x">
+                  <source media="(max-width: 1023px)" srcset="img/blog-2-tablet.jpg 1x, img/blog-2-tablet@2x.jpg 2x">
+                  <!-- 1х: 570px*630px; 2x: 1140px*1260px -->
+                  <source type="image/webp" srcset="img/blog-2.webp 1x, img/blog-2@2x.webp 2x">
+                  <img src="img/blog-2.jpg" srcset="img/blog-2@2x.jpg 2x" width="570" height="630" alt="A woman in jewellry">
+                </picture>
+              </div>
+              <div class="blog__content">
+                <p>September 16, 2019</p>
+                <h3>AW 19 trends</h3>
+                <a href="#" class="blog__read-article-link see-more-link">Read Article</a>
+              </div>
+            </li>
+            <li class="blog__item blog__item--reverse blog__item--second-tablet">
+              <div class="blog__image">
+                <picture>
+                  <!-- 1х: 290px*256px; 2x: 580px*512px -->
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/blog-3-mobile.webp 1x, img/blog-3-mobile@2x.webp 2x">
+                  <source media="(max-width: 768px)" srcset="img/blog-3-mobile.jpg 1x, img/blog-3-mobile@2x.jpg 2x">
+                  <!-- 1х: 339px*300px; 2x: 678px*600px -->
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/blog-3-tablet.webp 1x, img/blog-3-tablet@2x.webp 2x">
+                  <source media="(max-width: 1023px)" srcset="img/blog-3-tablet.jpg 1x, img/blog-3-tablet@2x.jpg 2x">
+                  <!-- 1х: 285px*300px; 2x: 570px*600px -->
+                  <source type="image/webp" srcset="img/blog-3.webp 1x, img/blog-3@2x.webp 2x">
+                  <img src="img/blog-3.jpg" srcset="img/blog-3@2x.jpg 2x" width="285" height="300" alt="The crystals are depicted in this picture">
+                </picture>
+              </div>
+              <div class="blog__content">
+                <p>September 23, 2019</p>
+                <h3>Power of crystals</h3>
+                <a href="#" class="blog__read-article-link see-more-link">Read Article</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="faq__wrap container">
+          <h2>Frequently asked questions</h2>
+          <div class="faq__row">
+            <ul class="faq__list">
+              <li class="faq__item faq__item--active" tabindex="0">
+                <h3>What materials are <br>the jewellery made of?</h3>
+                <div class="faq__content">
+                  <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+                </div>
+              </li>
+              <li class="faq__item" tabindex="0">
+                <h3>Which countries <br>do you deliver to?</h3>
+                <div class="faq__content">
+                  <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals. Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+                </div>
+              </li>
+              <li class="faq__item" tabindex="0">
+                <h3>What are the <br>payment methods?</h3>
+                <div class="faq__content">
+                  <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+                  <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals. Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+                </div>
+              </li>
+              <li class="faq__item" tabindex="0">
+                <h3>Can I return the <br>jewellery if it didn’t fit me?</h3>
+                <div class="faq__content">
+                  <p>Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="gallery__wrap container">
+          <h2><span>@</span>Chjewellery</h2>
+          <a href="#" class="gallery__link see-more-link">Follow Us</a>
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <picture>
+                <!-- 1х: 133px*133px; 2x: 266px*266px -->
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
+                <source media="(max-width: 768px)" srcset="img/photo-1-mobile.jpg 1x, img/photo-1-mobile@2x.jpg 2x">
+                <!-- 1х: 133px*133px; 2x: 266px*266px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+                <!-- 1х: 230px*230px; 2x: 460px*460px -->
+                <source type="image/webp" srcset="img/photo-1.webp 1x, img/photo-1@2x.webp 2x">
+                <img src="img/photo-1.jpg" srcset="img/photo-1@2x.jpg 2x" width="230" height="230" alt="Our earrings">
+              </picture>
+            </li>
+            <li class="gallery__item gallery__item--big">
+              <picture>
+              <!-- 1х: 133px*247px; 2x: 266px*494px -->
+              <source type="image/webp" media="(max-width: 768px)" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2x.webp 2x">
+              <source media="(max-width: 768px)" srcset="img/photo-2-mobile.jpg 1x, img/photo-2-mobile@2x.jpg 2x">
+              <!-- 1х: 231px*240px; 2x: 462px*480px -->
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+              <!-- 1х: 399px*412px; 2x: 798px*824px -->
+              <source type="image/webp" srcset="img/photo-2.webp 1x, img/photo-2@2x.webp 2x">
+              <img src="img/photo-2.jpg" srcset="img/photo-2@2x.jpg 2x" width="399" height="412" alt="Beautiful Elina">
+            </picture>
+            </li>
+            <li class="gallery__item gallery__item--hidden">
+              <picture>
+                <!-- 1х: 133px*133px; 2x: 266px*266px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+                <!-- 1х: 230px*230px; 2x: 460px*460px -->
+                <source type="image/webp" srcset="img/photo-3.webp 1x, img/photo-3@2x.webp 2x">
+                <img src="img/photo-3.jpg" srcset="img/photo-3@2x.jpg 2x" width="230" height="230" alt="Gold bracelets">
+              </picture>
+            </li>
+            <li class="gallery__item gallery__item--hidden">
+              <picture>
+                <!-- 1х: 133px*133px; 2x: 266px*266px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-4-tablet.webp 1x, img/photo-4-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+                <!-- 1х: 230px*230px; 2x: 460px*460px -->
+                <source type="image/webp" srcset="img/photo-4.webp 1x, img/photo-4@2x.webp 2x">
+                <img src="img/photo-4.jpg" srcset="img/photo-4@2x.jpg 2x" width="230" height="230" alt="These earrings are suitable for any event">
+              </picture>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <!-- 1х: 133px*87px; 2x: 266px*174px -->
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/photo-5-mobile.webp 1x, img/photo-5-mobile@2x.webp 2x">
+                <source media="(max-width: 768px)" srcset="img/photo-5-mobile.jpg 1x, img/photo-5-mobile@2x.jpg 2x">
+                <!-- 1х: 133px*87px; 2x: 266px*174px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-5-tablet.webp 1x, img/photo-5-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/photo-5-tablet.jpg 1x, img/photo-5-tablet@2x.jpg 2x">
+                <!-- 1х: 230px*150px; 2x: 460px*300px -->
+                <source type="image/webp" srcset="img/photo-5.webp 1x, img/photo-5@2x.webp 2x">
+                <img src="img/photo-5.jpg" srcset="img/photo-5@2x.jpg 2x" width="230" height="150" alt="We have a large selection of precious stones">
+              </picture>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <!-- 1х: 133px*87px; 2x: 266px*174px -->
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/photo-6-mobile.webp 1x, img/photo-6-mobile@2x.webp 2x">
+                <source media="(max-width: 768px)" srcset="img/photo-6-mobile.jpg 1x, img/photo-6-mobile@2x.jpg 2x">
+                <!-- 1х: 133px*86px; 2x: 266px*172px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-6-tablet.webp 1x, img/photo-6-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/photo-6-tablet.jpg 1x, img/photo-6-tablet@2x.jpg 2x">
+                <!-- 1х: 230px*150px; 2x: 460px*300px -->
+                <source type="image/webp" srcset="img/photo-6.webp 1x, img/photo-6@2x.webp 2x">
+                <img src="img/photo-6.jpg" srcset="img/photo-6@2x.jpg 2x" width="230" height="150" alt="Сollect your jewelry collection">
+              </picture>
+            </li>
+            <li class="gallery__item">
+              <picture>
+                <!-- 1х: 133px*87px; 2x: 266px*174px -->
+                <source type="image/webp" media="(max-width: 768px)" srcset="img/photo-7-mobile.webp 1x, img/photo-7-mobile@2x.webp 2x">
+                <source media="(max-width: 768px)" srcset="img/photo-7-mobile.jpg 1x, img/photo-7-mobile@2x.jpg 2x">
+                <!-- 1х: 133px*87px; 2x: 266px*174px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-7-tablet.webp 1x, img/photo-7-tablet@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/photo-7-tablet.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
+                <!-- 1х: 230px*150px; 2x: 460px*300px -->
+                <source type="image/webp" srcset="img/photo-7.webp 1x, img/photo-7@2x.webp 2x">
+                <img src="img/photo-7.jpg" srcset="img/photo-7@2x.jpg 2x" width="230" height="150" alt="The picture shows women's hands in rings">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

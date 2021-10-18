@@ -1,3 +1,23 @@
+.header {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 114px;
+    left: 1px;
+    height: 1px;
+    width: 100%;
+    background-color: $light-grey;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    &::after {
+      position: initial;
+    }
+  }
+}
+
 .header__wrap {
   position: relative;
 
@@ -12,11 +32,9 @@
 
 .header__row {
   padding: 30px 0 11px;
-  border-bottom: 1px solid $light-grey;
 
   @media (max-width: $tablet-max-width) {
     padding: 30px 45px 22px;
-    border: none;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -103,7 +121,28 @@
   }
 }
 
-.header__row--menu-opened .header__button-menu,
+.header__row--menu-nojs.header__row {
+  @media (max-width: $tablet-max-width) {
+    background-color: $brown;
+  }
+}
+
+.header__row--menu-nojs .header__link-logo,
+.header__row--menu-nojs .header__button-mail {
+  @media (max-width: $tablet-max-width) {
+    stroke: $white;
+
+    &:hover,
+    &:focus {
+      stroke: $dark;
+    }
+
+    &:active {
+      stroke: $light-brown;
+    }
+  }
+}
+
 .header__row--menu-opened .header__link-logo,
 .header__row--menu-opened .header__button-mail {
   @media (max-width: $tablet-max-width) {
@@ -117,5 +156,20 @@
     &:active {
       stroke: $light-brown;
     }
+  }
+}
+
+.header--opened {
+  @media (max-width: $tablet-max-width) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: all 0.3s ease 0s;
   }
 }

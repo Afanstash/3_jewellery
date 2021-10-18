@@ -18,9 +18,9 @@
     <header class="header">
       <div class="container">
         <div class="header__wrap">
-          <div class="header__row header__row--menu-opened">
+          <div class="header__row header__row--menu-nojs">
             <div class="header__block">
-              <a href="index.html" class="header__link-logo">
+              <a href="main.html" class="header__link-logo">
                 <svg width="66" height="66" aria-label="Our logo - CH">
                   <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
                 </svg>
@@ -35,7 +35,7 @@
               </div>
             </div>
           </div>
-          <nav class="header__main-nav main-nav main-nav--opened main-nav--nojs">
+          <nav class="header__main-nav main-nav main-nav--nojs">
             <button class="main-nav__button-menu" type="button" aria-label="Click to open or close the menu">
               <svg width="25" height="18" aria-hidden="true" focusable="false">
                 <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
@@ -44,7 +44,7 @@
             <form class="main-nav__form-search" method="get" action="https://echo.htmlacademy.ru/">
               <div class="main-nav__form-field">
                 <label for="search"><span class="visually-hidden">Search</span></label>
-                <input type="search" name="search" id="search" placeholder="Type here to search">
+                <input type="search" name="search" id="search" placeholder="Type here to search" required="required">
               </div>
             </form>
             <ul class="main-nav__list">
@@ -77,10 +77,15 @@
 
       <div class="container">
         <div class="catalog-wrapper">
-          <section class="filter filter--closed">
+          <section class="filter filter--nojs">
             <h2 class="visually-hidden">Filter</h2>
-            <button class="filter__button" type="button">Filter</button>
             <form class="filter__form" method="get" action="https://echo.htmlacademy.ru/">
+              <button class="filter__button" type="button">
+                <span class="filter__button-name">Filter</span>
+                <svg width="32" height="32" aria-label="Close">
+                  <use xlink:href="img/sprite_auto.svg#icon-filter-close"></use>
+                </svg>
+              </button>
               <ul class="filter__form-list">
                 <li class="filter__form-item filter__form-item--active" tabindex="0">
                   <h3>Product</h3>
@@ -131,7 +136,7 @@
                 </li>
                 <li class="filter__form-item filter__form-item--active" tabindex="0">
                   <h3>Price</h3>
-                  <div class="filter__form-content">
+                  <div class="filter__form-content filter__form-content--price">
                     <div class="range-controls">
                       <div class="range-controls__scale">
                         <div class="range-controls__bar"></div>
@@ -140,7 +145,7 @@
                       <div class="range-controls__toggle range-controls__toggle--max" tabindex="0"></div>
                       <div class="range-controls__price">
                         <span class="range-controls__number range-controls__number--min">$ 55</span>
-                        <span class="range-controls__number">$ 155</span>
+                        <span class="range-controls__number range-controls__number--max">$ 155</span>
                       </div>
                     </div>
                   </div>
@@ -190,7 +195,7 @@
                       <img src="img/card-2.jpg" srcset="img/card-2@2x.jpg 2x" width="270" height="272" alt="Choker with gold bead">
                     </picture>
                   </div>
-                  <div class="card__content">
+                  <div class="card__content card__content--margin-left-price">
                     <h3>Choker with gold bead</h3>
                     <p>$ 55</p>
                   </div>
@@ -441,7 +446,7 @@
           <form class="footer__form-news" method="post" action="https://echo.htmlacademy.ru/">
             <div class="footer__form-field">
               <label for="email"><span class="visually-hidden">Your E-mail</span></label>
-              <input type="email" name="email" id="email" placeholder="Your E-mail">
+              <input type="email" name="email" id="email" placeholder="Your E-mail" required="required">
             </div>
             <button class="footer__button-form-submit" type="submit">
               <span>Sign Up</span>
@@ -515,12 +520,12 @@
       <h2>Log In</h2>
       <form class="modal-form__form form-login" method="post" action="https://echo.htmlacademy.ru/" autocomplete="off">
         <div class="form-login__field">
-          <label class="visually-hidden" for="email-login"></label>
+          <label for="email-login"><span class="visually-hidden">Your E-mail</span></label>
           <input id="email-login" type="email" name="email-login" placeholder="Your E-mail" required="required">
         </div>
         <div class="form-login__password-wrap">
           <div class="form-login__field">
-            <label class="visually-hidden" for="password"></label>
+            <label for="password"><span class="visually-hidden">Password</span></label>
             <input id="password" type="password" name="password" placeholder="Password" required="required">
           </div>
           <a class="form-login__link-forgot-password" href="#">Forgot your password?</a>

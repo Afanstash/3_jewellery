@@ -69,3 +69,11 @@
     margin-left: 0;
   }
 }
+
+.card__content--margin-left-price p {
+  margin-left: 14px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-left: 0;
+  }
+}
