@@ -1,3 +1,7 @@
+@import "libs/swiper.scss";
+@import "libs/swiper-vars.scss";
+@import "libs/pagination.scss";
+@import "libs/navigation.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/mixin.scss";
@@ -5,7 +9,6 @@
 @import "blocks/wrapper.scss";
 @import "blocks/container.scss";
 @import "blocks/see-more-link.scss";
-@import "blocks/swiper.scss";
 
 /* Header */
 

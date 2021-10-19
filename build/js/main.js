@@ -217,4 +217,50 @@
       item.classList.add('filter__form-item--active');
     }
   });
+
+  /* eslint-disable */
+  if (document.querySelector('.swiper')) {
+    var swiper = new Swiper('.swiper', {
+
+      // Navigation arrows
+      navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: 'true',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+
+      // pagination: {
+      //   el: '.swiper-pagination-p',
+      //   clickable: 'true',
+      //   type: "fraction",
+      //   renderFraction: function (currentClass, totalClass) {
+      //     return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+      //   },
+      // },
+
+
+      // Responsive breakpoints
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 30,
+        },
+        // when window width is >= 1024px
+        1024: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 30,
+        },
+      }
+    });
+  }
 })();
