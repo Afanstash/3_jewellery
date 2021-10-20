@@ -212,3 +212,24 @@
 .new-products__pagination .swiper-pagination-total {
   margin-left: 10px;
 }
+
+.new-products__swiper--nojs .swiper {
+  overflow: auto;
+}
+
+.new-products__swiper--nojs .new-products__list {
+  margin: 0 -15px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.new-products__swiper--nojs .new-products__slide {
+  margin-bottom: 30px;
+  padding: 0 15px;
+  width: auto;
+  max-width: 270px;
+  flex: 1 1 auto;
+}

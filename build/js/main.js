@@ -219,73 +219,87 @@
   });
 
   /* eslint-disable */
-  if (document.querySelector('.swiper')) {
-    var swiper = new Swiper('.swiper', {
+  if (document.querySelector('.new-products__swiper')) {
+    var newProductsSwiper = document.querySelector('.new-products__swiper');
+    newProductsSwiper.classList.remove('new-products__swiper--nojs');
 
-      // Navigation arrows
-      navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      },
+    if (document.querySelector('.swiper')) {
 
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: 'true',
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
+      var swiper = new Swiper('.swiper', {
+
+        // Navigation arrows
+        navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
         },
-      },
 
-      // Responsive breakpoints
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 30,
+        allowTouchMove: false,
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: 'true',
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
         },
-        // when window width is >= 1024px
-        1024: {
-          slidesPerView: 4,
-          slidesPerGroup: 4,
-          spaceBetween: 30,
+
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 30,
+          },
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 30,
+          },
+        }
+      });
+
+      var swiperMobile = new Swiper('.swiper', {
+
+        // Navigation arrows
+        navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
         },
-      }
-    });
 
-    var swiperMobile = new Swiper('.swiper', {
-
-      // Navigation arrows
-      navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      },
-
-      pagination: {
-        el: '.swiper-pagination-fraction',
-        clickable: 'true',
-        type: "fraction",
-        renderFraction: function (currentClass, totalClass) {
-          return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+        pagination: {
+          el: '.swiper-pagination-fraction',
+          clickable: 'true',
+          type: "fraction",
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
+          },
         },
-      },
 
 
-      // Responsive breakpoints
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 30,
-        },
-        // when window width is >= 1024px
-        1024: {
-          slidesPerView: 4,
-          slidesPerGroup: 4,
-          spaceBetween: 30,
-        },
-      }
-    });
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 30,
+          },
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 30,
+          },
+        }
+      });
+
+      swiper.on('slideChange', function () {
+        var currentNumber = document.querySelector('.swiper-pagination-fraction .swiper-pagination-current');
+        var indexPage = swiper.realIndex / 2 + 1;
+        currentNumber.innerHTML = indexPage;
+      });
+    }
   }
 })();

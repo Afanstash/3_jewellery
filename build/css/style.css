@@ -1435,6 +1435,32 @@ a {
 .new-products__pagination .swiper-pagination-total {
   margin-left: 10px; }
 
+.new-products__swiper--nojs .swiper {
+  overflow: auto; }
+
+.new-products__swiper--nojs .new-products__list {
+  margin: 0 -15px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 30px; }
+
+.new-products__swiper--nojs .new-products__slide {
+  margin-bottom: 30px;
+  padding: 0 15px;
+  width: auto;
+  max-width: 270px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+
 .products-list {
   margin: 0;
   padding: 0;
