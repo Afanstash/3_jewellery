@@ -233,8 +233,6 @@
           nextEl: '.swiper-button-next',
         },
 
-        allowTouchMove: false,
-
         pagination: {
           el: '.swiper-pagination',
           clickable: 'true',
