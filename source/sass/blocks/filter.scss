@@ -32,14 +32,19 @@
   font-weight: 500;
   font-family: "Poppins", "Arial", sans-serif;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $dark;
     background-color: $light-brown;
   }
 
+  &:focus {
+    color: $dark;
+    background-color: $white;
+  }
+
   &:active {
     color: $grey;
+    background-color: $brown;
   }
 }
 
@@ -377,6 +382,7 @@
   cursor: pointer;
   display: block;
   user-select: none;
+  width: fit-content;
   position: relative;
 
   @media (max-width: $tablet-max-width) {

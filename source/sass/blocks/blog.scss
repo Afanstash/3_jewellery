@@ -137,6 +137,8 @@
 
   @media (max-width: $mobile-max-width) {
     flex-basis: auto;
+    max-height: 300px;
+    min-height: 256px;
   }
 }
 

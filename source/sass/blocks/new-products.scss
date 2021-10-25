@@ -50,7 +50,9 @@
 
 .new-products__toggle .swiper-button-prev,
 .new-products__toggle .swiper-button-next {
+  margin-top: 0;
   position: relative;
+  top: 0;
 
   &::after {
     position: absolute;
@@ -71,19 +73,33 @@
 
 .new-products__toggle .swiper-button-prev {
   left: 0;
+  width: 30px;
+  height: 11px;
 
   &::after {
     left: 0;
     background-image: url("../img/icon-left-arrow.svg");
   }
+
+  @media (max-width: $tablet-max-width) {
+    width: 36px;
+    height: 15px;
+  }
 }
 
 .new-products__toggle .swiper-button-next {
   right: 0;
+  width: 30px;
+  height: 11px;
 
   &::after {
     right: 0;
     background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  @media (max-width: $tablet-max-width) {
+    width: 36px;
+    height: 15px;
   }
 }
 
@@ -113,14 +129,15 @@
 }
 
 .new-products .card__image {
-  height: 284px;
+  max-height: 284px;
 
   @media (max-width: $tablet-max-width) {
-    height: 340px;
+    min-height: 340px;
+    max-height: 95%;
   }
 
   @media (max-width: $mobile-max-width) {
-    height: 136px;
+    min-height: 136px;
   }
 }
 
@@ -211,6 +228,10 @@
 
 .new-products__pagination .swiper-pagination-total {
   margin-left: 10px;
+}
+
+.new-products .swiper-notification {
+  display: none;
 }
 
 .new-products__swiper--nojs .swiper {

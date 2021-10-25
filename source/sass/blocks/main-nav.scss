@@ -253,7 +253,7 @@
 
 .main-nav__user-block {
   position: absolute;
-  top: 28px;
+  top: 42px;
   right: 0;
   display: flex;
   flex-direction: row;
@@ -268,8 +268,9 @@
   }
 }
 
-.main-nav__link-login {
+.main-nav__user-link {
   @include link;
+  margin-left: 38px;
 
   @media (max-width: $tablet-max-width) {
     display: block;
@@ -288,9 +289,13 @@
   }
 }
 
-.main-nav__user-block p {
-  margin-left: 38px;
+.main-nav__user-link--login {
+  @media (max-width: $tablet-max-width) {
+    margin-left: 0;
+  }
+}
 
+.main-nav__user-link--cart {
   @media (max-width: $tablet-max-width) {
     display: none;
   }

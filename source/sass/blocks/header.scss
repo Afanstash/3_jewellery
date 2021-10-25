@@ -62,6 +62,15 @@
   justify-self: center;
   fill: $brown;
 
+  @media (max-width: $tablet-max-width) {
+    display: block;
+    grid-column: 3 / 5;
+  }
+}
+
+.header__link-logo--active {
+  fill: $brown;
+
   &:hover,
   &:focus {
     fill: $dark;
@@ -69,11 +78,6 @@
 
   &:active {
     fill: $light-brown;
-  }
-
-  @media (max-width: $tablet-max-width) {
-    display: block;
-    grid-column: 3 / 5;
   }
 }
 
@@ -131,6 +135,13 @@
 }
 
 .header__row--menu-nojs .header__link-logo,
+.header__row--menu-opened .header__link-logo {
+  @media (max-width: $tablet-max-width) {
+    stroke: $white;
+  }
+}
+
+.header__row--menu-nojs .header__link-logo--active,
 .header__row--menu-nojs .header__button-mail {
   @media (max-width: $tablet-max-width) {
     stroke: $white;
@@ -146,7 +157,7 @@
   }
 }
 
-.header__row--menu-opened .header__link-logo,
+.header__row--menu-opened .header__link-logo--active,
 .header__row--menu-opened .header__button-mail {
   @media (max-width: $tablet-max-width) {
     stroke: $white;

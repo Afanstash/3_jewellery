@@ -4,12 +4,12 @@
   color: $white;
   background-image: url("../img/index-banner.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center;
   background-size: cover;
   background-color: $background-banner;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/index-banne@2x.jpg");
+    background-image: url("../img/index-banner@2x.jpg");
   }
 
   @media (max-width: $tablet-max-width) {
@@ -73,7 +73,7 @@
   background-image: url("../img/catalog-banner.jpg");
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/catalog-banne@2x.jpg");
+    background-image: url("../img/catalog-banner@2x.jpg");
   }
 
   @media (max-width: $tablet-max-width) {

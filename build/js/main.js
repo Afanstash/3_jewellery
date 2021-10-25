@@ -3,7 +3,7 @@
   var body = document.querySelector('body');
   var accordions = document.querySelectorAll('.faq__item');
   var accordionsFilter = document.querySelectorAll('.filter__form-item');
-  var linkLogin = document.querySelector('.main-nav__link-login');
+  var linkLogin = document.querySelector('.main-nav__user-link--login');
   var modalForm = document.querySelector('.modal-form');
   var inputEmailLogin = modalForm.querySelector('#email-login');
   var inputPasswordLogin = modalForm.querySelector('#password');
@@ -188,12 +188,6 @@
     }
   });
 
-  var closeAccordionsFilter = function () {
-    accordionsFilter.forEach(function (i) {
-      i.classList.remove('filter__form-item--active');
-    });
-  };
-
   accordionsFilter.forEach(function (item) {
     item.classList.add('filter__form-item--js');
     item.addEventListener('click', function () {
@@ -201,7 +195,6 @@
         item.classList.remove('filter__form-item--active');
         return;
       }
-      closeAccordionsFilter();
       item.classList.add('filter__form-item--active');
     });
   });
@@ -213,7 +206,6 @@
         item.classList.remove('filter__form-item--active');
         return;
       }
-      closeAccordions();
       item.classList.add('filter__form-item--active');
     }
   });
@@ -232,6 +224,8 @@
           prevEl: '.swiper-button-prev',
           nextEl: '.swiper-button-next',
         },
+
+        simulateTouch: false,
 
         pagination: {
           el: '.swiper-pagination',
@@ -265,6 +259,8 @@
           prevEl: '.swiper-button-prev',
           nextEl: '.swiper-button-next',
         },
+
+        simulateTouch: false,
 
         pagination: {
           el: '.swiper-pagination-fraction',
