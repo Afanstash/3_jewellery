@@ -3,7 +3,8 @@
   var body = document.querySelector('body');
   var accordions = document.querySelectorAll('.faq__item');
   var accordionsFilter = document.querySelectorAll('.filter__form-item');
-  var linkLogin = document.querySelector('.user-link-login');
+  var linkHeaderLogin = document.querySelector('.header__user-link--login');
+  var linkMainNavLogin = document.querySelector('.main-nav__user-link--login');
   var modalForm = document.querySelector('.modal-form');
   var inputEmailLogin = modalForm.querySelector('#email-login');
   var inputPasswordLogin = modalForm.querySelector('#password');
@@ -91,7 +92,15 @@
     }
   });
 
-  linkLogin.addEventListener('click', function (evt) {
+  linkHeaderLogin.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modalForm.classList.remove('modal-form--hidden');
+    modalForm.classList.add('modal-form--show');
+    body.classList.add('lock');
+    inputEmailLogin.focus();
+  });
+
+  linkMainNavLogin.addEventListener('click', function (evt) {
     evt.preventDefault();
     modalForm.classList.remove('modal-form--hidden');
     modalForm.classList.add('modal-form--show');
@@ -251,7 +260,10 @@
   /* eslint-disable */
   if (document.querySelector('.new-products__swiper')) {
     var newProductsSwiper = document.querySelector('.new-products__swiper');
+    var newProductsToggle = document.querySelector('.new-products__toggle');
     newProductsSwiper.classList.remove('new-products__swiper--nojs');
+    newProductsToggle.classList.remove('new-products__toggle--nojs');
+
 
     if (document.querySelector('.swiper')) {
 
