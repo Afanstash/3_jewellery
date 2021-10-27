@@ -32,15 +32,15 @@
 }
 
 .new-products__toggle {
-  height: 10px;
-  margin-bottom: 15px;
+  min-height: 11px;
+  margin-bottom: 14px;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   @media (max-width: $tablet-max-width) {
-    margin-bottom: 11px;
+    margin-bottom: 5px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -231,6 +231,11 @@
 }
 
 .new-products .swiper-notification {
+  display: none;
+}
+
+.new-products__toggle--nojs .swiper-button-prev,
+.new-products__toggle--nojs .swiper-button-next {
   display: none;
 }
 
