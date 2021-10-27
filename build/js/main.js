@@ -17,6 +17,7 @@
   if (document.querySelector('.filter')) {
     var filter = document.querySelector('.filter');
     var filterButton = filter.querySelector('.filter__button');
+    var filterButtonClose = filter.querySelector('.filter__button-close');
 
     filter.classList.remove('filter--nojs');
     filter.classList.add('filter--closed');
@@ -27,7 +28,12 @@
         filter.classList.remove('filter--closed');
         filter.classList.add('filter--opened');
         body.classList.add('lock');
-      } else {
+      }
+    });
+
+    filterButtonClose.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      if (!filter.classList.contains('filter--closed')) {
         filter.classList.add('filter--closed');
         filter.classList.remove('filter--opened');
         body.classList.remove('lock');
@@ -209,6 +215,38 @@
       item.classList.add('filter__form-item--active');
     }
   });
+
+  if (document.querySelector('.filter__form')) {
+    // add all the elements inside modal which you want to make focusable
+    var focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    var filterForm = document.querySelector('.filter__form'); // select the modal by it's id
+    var firstFocusableElement = filterForm.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
+    var focusableContent = filterForm.querySelectorAll(focusableElements);
+    var lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+
+
+    document.addEventListener('keydown', function (e) {
+      var isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+      if (!isTabPressed) {
+        return;
+      }
+
+      if (e.shiftKey) { // if shift key pressed for shift + tab combination
+        if (document.activeElement === firstFocusableElement) {
+          lastFocusableElement.focus(); // add focus for the last focusable element
+          e.preventDefault();
+        }
+      } else { // if tab key is pressed
+        if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+          firstFocusableElement.focus(); // add focus for the first focusable element
+          e.preventDefault();
+        }
+      }
+    });
+
+    firstFocusableElement.focus();
+  }
 
   /* eslint-disable */
   if (document.querySelector('.new-products__swiper')) {

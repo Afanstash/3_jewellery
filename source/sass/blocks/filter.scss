@@ -22,6 +22,7 @@
 }
 
 .filter__button,
+.filter__button-close,
 .filter__button-submit,
 .filter__button-reset {
   @include button($brown);
@@ -65,21 +66,30 @@
   }
 }
 
-.filter__button svg {
-  fill: $white;
+.filter__button-close {
   display: none;
 
-  &:hover,
-  &:focus {
-    fill: $brown;
-  }
+  @media (max-width: $tablet-max-width) {
+    fill: $white;
 
-  &:active {
-    fill: $light-brown;
+    &:hover,
+    &:focus {
+      fill: $brown;
+    }
+
+    &:active {
+      fill: $light-brown;
+    }
   }
 }
 
 .filter--nojs .filter__button {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.filter--nojs .filter__button-close {
   @media (max-width: $tablet-max-width) {
     display: none;
   }
@@ -91,7 +101,7 @@
   }
 }
 
-.filter--opened .filter__button-name {
+.filter--opened .filter__button {
   @media (max-width: $tablet-max-width) {
     display: none;
   }
@@ -103,8 +113,9 @@
   }
 }
 
-.filter--opened .filter__button {
+.filter--opened .filter__button-close {
   @media (max-width: $tablet-max-width) {
+    display: block;
     padding: 0;
     position: absolute;
     top: -16px;
@@ -322,7 +333,7 @@
     padding: 23px 0 9px;
   }
 
-  @media (max-width: $tablet-max-width) {
+  @media (max-width: $mobile-max-width) {
     padding: 14px 0 0;
   }
 }
