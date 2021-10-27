@@ -122,6 +122,27 @@
   }
 }
 
+.header__user-block {
+  margin-top: 12px;
+  grid-column: 9 / -1;
+  justify-self: end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
+.header__user-link {
+  @include link;
+  margin-left: 38px;
+}
+
 .header__row--menu-opened.header__row {
   @media (max-width: $tablet-max-width) {
     background-color: $brown;

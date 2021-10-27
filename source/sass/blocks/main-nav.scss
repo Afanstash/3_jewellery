@@ -252,27 +252,20 @@
 }
 
 .main-nav__user-block {
-  position: absolute;
-  top: 42px;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: none;
   font-size: 14px;
   line-height: 21px;
 
   @media (max-width: $tablet-max-width) {
-    position: relative;
-    top: 0;
-    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
 .main-nav__user-link {
-  @include link;
-  margin-left: 38px;
-
   @media (max-width: $tablet-max-width) {
+    @include link;
     display: block;
     color: $white;
     font-size: 18px;
@@ -286,17 +279,5 @@
     &:active {
       color: $light-brown;
     }
-  }
-}
-
-.main-nav__user-link--login {
-  @media (max-width: $tablet-max-width) {
-    margin-left: 0;
-  }
-}
-
-.main-nav__user-link--cart {
-  @media (max-width: $tablet-max-width) {
-    display: none;
   }
 }

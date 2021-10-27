@@ -3,7 +3,7 @@
   var body = document.querySelector('body');
   var accordions = document.querySelectorAll('.faq__item');
   var accordionsFilter = document.querySelectorAll('.filter__form-item');
-  var linkLogin = document.querySelector('.main-nav__user-link--login');
+  var linkLogin = document.querySelector('.user-link-login');
   var modalForm = document.querySelector('.modal-form');
   var inputEmailLogin = modalForm.querySelector('#email-login');
   var inputPasswordLogin = modalForm.querySelector('#password');
